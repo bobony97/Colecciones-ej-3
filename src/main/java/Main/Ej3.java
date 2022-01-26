@@ -11,19 +11,19 @@ public class Ej3 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in).useDelimiter("\n");
 
-        ServiAlumno a = new ServiAlumno();
+        ServiAlumno servicioAlumno = new ServiAlumno();
         ArrayList<Alumno> alumnos = new ArrayList();
 
         String opc = "";
         
         
-        alumnos.add(a.crearAlumno());
+        alumnos.add(servicioAlumno.crearAlumno());
 
         while (!opc.equals("n")) {
             System.out.println("Desea agregar otro alumno s/n");
             opc = leer.next();
             if (opc.equals("s")) {
-                alumnos.add(a.crearAlumno());
+                alumnos.add(servicioAlumno.crearAlumno());
             } else {
                 System.out.println("Operacion Finalizada");
             }
@@ -38,7 +38,7 @@ public class Ej3 {
             Alumno aux = it.next();
             
             if(aux.getNombres().equals(nombreBuscar)) {
-                System.out.println("El promedio es: " + a.notaFinal(aux));
+                System.out.println("El promedio es: " + servicioAlumno.notaFinal(aux));
             }
             
         }
